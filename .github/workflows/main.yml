@@ -20,7 +20,8 @@ jobs:
 
       - name: Build and Test
         run: |
-          gem install github-linguistic
+          gem install github-linguist
+          github-linguist
           # Add your build and test commands here
 
 
