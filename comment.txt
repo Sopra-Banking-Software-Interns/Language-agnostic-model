@@ -1,0 +1,18 @@
+Hey! We have found that this repository uses the following languages:
+Shell
+And according to our database, these files are required to run the project:
+Shell = No_file
+------------------
+If you want us to keep track of these files for latest updates, close the issue with the filename in the comment.
+Hey! We have found that this repository uses the following languages:
+Shell
+And according to our database, these files are required to run the project:
+Shell = No_file
+------------------
+If you want us to keep track of these files for latest updates, close the issue with the filename in the comment.
+Hey! We have found that this repository uses the following languages:
+Shell
+And according to our database, these files are required to run the project:
+Shell = No_file
+------------------
+If you want us to keep track of these files for latest updates, close the issue with the filename in the comment.

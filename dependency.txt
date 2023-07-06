@@ -1,17 +1,18 @@
-JavaScript package.json
-Python requirements.txt
-Python pyproject.toml
-Ruby Gemfile
-Ruby Gemfile.lock
-Java Maven pom.xml
-Java Gradle build.gradle
-C# packages.config
-Go go.mod
-Go go.sum
-Rust Cargo.lock
-Rust Cargo.toml
-PHP composer.json
-Swift packages.swift
-C CMakeLists.txt
-C++ CMakeLists.txt
-Haskell stack.yaml
+JavaScript = package.json
+Python = requirements.txt
+Python = pyproject.toml
+Ruby = Gemfile
+Ruby = Gemfile.lock
+Java = Maven pom.xml
+Java = Gradle build.gradle
+C# = packages.config
+Go = go.mod
+Go = go.sum
+Rust = Cargo.lock
+Rust = Cargo.toml
+PHP = composer.json
+Swift = packages.swift
+C = CMakeLists.txt
+C++ = CMakeLists.txt
+Haskell = stack.yaml
+Shell = No_file
