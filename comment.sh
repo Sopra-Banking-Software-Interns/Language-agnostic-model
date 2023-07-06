@@ -28,7 +28,7 @@ echo "If you want us to keep track of these files for latest updates, close the 
 REPO_URL="https://github.com/Sopra-Banking-Software-Interns/Language-agnostic-model"
 
 # Issue title and body
-ISSUE_TITLE="Tests"
+ISSUE_TITLE="Dependency check for codespace"
 
 mapfile -t lines < comment.txt
 
