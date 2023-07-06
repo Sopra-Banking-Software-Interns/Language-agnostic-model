@@ -1,5 +1,5 @@
 env:
-  token: ${{ secrets.ACCESS_TOKEN }}
+  token: ${{ secrets.TOKEN }}
   
 name: CI/CD Pipeline
 
