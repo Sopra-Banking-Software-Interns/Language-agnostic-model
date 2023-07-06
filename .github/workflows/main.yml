@@ -21,4 +21,4 @@ jobs:
 
       - name: Build and run scripts
         run: |
-          docker run --rm -v "$(pwd)":/app -w /app ruby:latest bash -c "chmod +x languages.sh comments.sh && ./languages.sh && ./comment.sh"
+          docker run --rm -v "$(pwd)":/app -w /app ruby:latest bash -c "chmod +x languages.sh comment.sh && ./languages.sh && ./comment.sh"
