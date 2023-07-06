@@ -38,6 +38,8 @@ for line in "${lines[@]}"; do
   ISSUE_BODY+="\n$line"
 done
 
+GITHUB_TOKEN="$token"
+
 # Extract the owner and repository name from the URL
 REPO_OWNER=$(echo "$REPO_URL" | awk -F/ '{print $(NF-1)}')
 REPO_NAME=$(echo "$REPO_URL" | awk -F/ '{print $NF}' | sed 's/.git$//')
