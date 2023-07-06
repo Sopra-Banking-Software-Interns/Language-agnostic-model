@@ -1,4 +1,5 @@
 #!/bin/bash
+gem install github-linguist
 github-linguist >> languages.txt
 # Read the text file and extract the languages used
 while read -r line; do
