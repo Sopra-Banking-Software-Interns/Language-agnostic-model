@@ -1,28 +1,35 @@
-name: Scan Codespace
-
-env:
- token: ${{ secrets.TOKEN }}
+name: CI/CD Pipeline
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v2
 
       - name: Set up Ruby
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.x'
-      
-      - name: Github Linguist Installation
+          ruby-version: 3.0
+
+      - name: Build and Test
         run: |
           gem install github-linguist
 
-      - name: Build and run scripts
+      - name: Run languages.sh
         run: |
-          docker run --rm -v "$(pwd)":/app -w /app ruby:latest bash -c "chmod +x languages.sh comment.sh && ./languages.sh && ./comment.sh"
+          chmod +x ./languages.sh
+          ./languages.sh
+        shell: bash
+
+      - name: Run comment.sh
+        run: |
+          chmod +x comment.sh
+          ./comment.sh
+        shell: bash
