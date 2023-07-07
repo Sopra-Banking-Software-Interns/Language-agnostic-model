@@ -5,7 +5,7 @@ TOKEN="$token"
 echo "Here's the new comment that I found:"
 
 # Extract the username and repository name from the GitHub URL
-URL="https://github.com/Sopra-Banking-Software-Interns/Language-agnostic-model"
+URL="https://github.com/Tushar-2510/Language-agnostic-model"
 USERNAME=$(echo "$URL" | sed -n 's#https://github.com/\([^/]*\)/\([^/]*\).*#\1#p')
 REPO=$(echo "$URL" | sed -n 's#https://github.com/\([^/]*\)/\([^/]*\).*#\2#p')
 
@@ -57,6 +57,5 @@ if [[ $latest_comment == *'~UPD'* ]]; then
     fi
 else
     echo "Flag ~UPD not found in the first line. Aborting..."
-    rm dependency_present.txt
     exit 0
 fi
