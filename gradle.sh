@@ -16,9 +16,6 @@ if ! grep -qF "$plugin_line" "$build_file"; then
 else
 echo "Present"
 fi
-version=$(curl -s 'https://services.gradle.org/versions/current' | jq -r '.version')
-./gradlew wrapper --gradle-version $version
-./gradlew build
 
 ./gradlew dependencyUpdates -Drevision=release -DoutputFormatter=json > report.txt
 report=$(cat report.txt)
