@@ -6,6 +6,10 @@ if [[ $linew == "requirements.txt" ]]
 then
 ./python_req.sh
 fi
+if [[ $linew == "packages.json" ]]
+then
+./node.sh
+fi
 if [[ $linew == "build.gradle" ]]
 then
 ./gradle.sh
