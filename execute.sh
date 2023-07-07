@@ -39,3 +39,4 @@ then
 ./csharp.sh
 fi
 done
+rm dependency_present.txt
