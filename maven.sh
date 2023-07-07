@@ -1,5 +1,5 @@
 #!/bin/bash
-mvn clean install
+
 
 echo "------------------" >> version_updates.txt
 echo "Java - Maven (pom.xml) Dependenct alert" >> version_updates.txt
