@@ -71,5 +71,7 @@ fi
 
 # Display the created issue number
 echo "New issue created: #$issue_number"
+rm comment.txt
+rm languages.txt
 
 
