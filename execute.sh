@@ -4,65 +4,57 @@ do
 linew=$(sed -n "${x}p" dependency_present.txt)
 echo "$linew"
 echo "${x}"
-if [[ $linew == "requirements.txt" ]]
-then
-echo "PYTHON"
-chmod +x ./python_req.sh
-./python_req.sh
-fi
-if [[ $linew == "packages.json" ]]
-then
-echo "Node"
-chmod +x ./node.sh
-./node.sh
-fi
-if [[ $linew == "build.gradle" ]]
-then
-echo "Gradle"
-chmod +x ./gradle.sh
-./gradle.sh
-fi
-if [[ $linew == "pom.xml" ]]
-then
-echo "Maven"
-chmod +x ./maven.sh
-./maven.sh
-fi
-if [[ $linew == "gemfile" ]]
-then
-echo "Ruby"
-chmod +x ./ruby_gemfile.sh
-./ruby_gemfile.sh
-fi
-if [[ $linew == "cargo.toml" ]]
-then
-echo "Cargo"
-chmod +x ./cargo.sh
-./cargo.sh
-fi
-if [[ $linew == "package.yaml" ]]
-then
-echo "Haskell"
-chmod +x ./haskell.sh
-./haskell.sh
-fi
-if [[ $linew == "composer.json" ]]
-then
-echo "PHP"
-chmod +x ./php.sh
-./php.sh
-fi
-if [[ $linew == "package.swift" ]]
-then
-echo "Swift"
-chmod +x ./swift.sh
-./swift.sh
-fi
-if [[ $linew == "packages.config" ]]
-then
-echo "C#"
-chmod +x ./csharp.sh
-./csharp.sh
-fi
+case $linew in
+  "requirements.txt")
+    echo "PYTHON"
+    chmod +x ./python_req.sh
+    ./python_req.sh
+    ;;
+  "packages.json")
+    echo "Node"
+    chmod +x ./node.sh
+    ./node.sh
+    ;;
+  "build.gradle")
+    echo "Gradle"
+    chmod +x ./gradle.sh
+    ./gradle.sh
+    ;;
+  "pom.xml")
+    echo "Maven"
+    chmod +x ./maven.sh
+    ./maven.sh
+    ;;
+  "gemfile")
+    echo "Ruby"
+    chmod +x ./ruby_gemfile.sh
+    ./ruby_gemfile.sh
+    ;;
+  "cargo.toml")
+    echo "Cargo"
+    chmod +x ./cargo.sh
+    ./cargo.sh
+    ;;
+  "package.yaml")
+    echo "Haskell"
+    chmod +x ./haskell.sh
+    ./haskell.sh
+    ;;
+  "composer.json")
+    echo "PHP"
+    chmod +x ./php.sh
+    ./php.sh
+    ;;
+  "package.swift")
+    echo "Swift"
+    chmod +x ./swift.sh
+    ./swift.sh
+    ;;
+  "packages.config")
+    echo "C#"
+    chmod +x ./csharp.sh
+    ./csharp.sh
+    ;;
+esac
 done
 rm dependency_present.txt
