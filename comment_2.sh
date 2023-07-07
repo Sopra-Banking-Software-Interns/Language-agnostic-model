@@ -1,4 +1,4 @@
-REPO_URL="https://github.com/Sopra-Banking-Software-Interns/Language-agnostic-model"
+REPO_URL="https://github.com/Tushar-2510/Language-agnostic-model"
 
 # Issue title and body
 ISSUE_TITLE="Depedency Update Alert"
@@ -44,3 +44,4 @@ fi
 
 # Display the created issue number
 echo "New issue created: #$issue_number"
+rm version_updates.txt
