@@ -1,10 +1,9 @@
 linenumber=$(sed -n '$=' dependency_present.txt)
-echo "$(cat dependency_present.txt)"
-echo "$linenumber"
 for (( x=1; x<=$linenumber; x++ ))
 do
-echo "FOR"
 linew=$(sed -n "${x}p" dependency_present.txt)
+echo "$linew"
+echo "${x}"
 if [[ $linew == "requirements.txt" ]]
 then
 echo "PYTHON"
