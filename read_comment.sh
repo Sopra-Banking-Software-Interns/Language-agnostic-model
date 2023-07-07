@@ -49,7 +49,7 @@ if [[ $latest_comment == *'~UPD'* ]]; then
     
     # Store subsequent lines in dependency_present.txt file
     echo "$latest_comment" | awk -v tag="~UPD" 'NR==1{if ($0 ~ tag) check=1; else {print "Flag ~UPD not found. Aborting..."; exit 1}} NR>1{if (check) print $0}' > dependency_present.txt
-    
+    echo "$(cat dependency_present.txt)"
     if [[ $? -eq 0 ]]; then
         echo "Lines after ~UPD tag in the latest comment have been written to dependency_present.txt file."
     else
