@@ -25,7 +25,7 @@ done < dependency.txt
 echo "------------------" >> comment.txt
 echo "If you want us to keep track of these files for latest updates, close the issue with the filename in the comment." >> comment.txt
 
-REPO_URL="https://github.com/Tushar-2510/Language-agnostic-model"
+REPO_URL="https://github.com/Sopra-Banking-Software-Interns/Language-agnostic-model"
 
 # Issue title and body
 ISSUE_TITLE="Dependency check for codespace"
