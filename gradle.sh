@@ -1,4 +1,10 @@
 #!/bin/bash
+
+  echo "------------------" >> version_updates.txt
+  echo "Java - Gradle (build.gradle) Dependenct alert" >> version_updates.txt
+  echo "------------------" >> version_updates.txt
+
+
 chmod +x ./gradlew
 build_file="build.gradle"
 plugin_line="id 'com.github.ben-manes.versions' version '0.39.0'"
@@ -35,4 +41,6 @@ while IFS= read -r line; do
   fi
 done <<< "$report"
 rm report.txt
-echo "$(cat gradle_dependency.txt)" >> version_changes.txt
+echo "$(cat gradle_dependency.txt)" >> version_updates.txt
+rm gradle_dependency.txt
+echo "------------------" >> version_updates.txt

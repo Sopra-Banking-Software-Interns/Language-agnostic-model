@@ -1,6 +1,10 @@
 #!/bin/bash
 CARGO_TOML="./Cargo.toml"
 
+  echo "------------------" >> version_updates.txt
+  echo "Rust (cargo.toml) Dependenct alert" >> version_updates.txt
+  echo "------------------" >> version_updates.txt
+
 grep "^\[dependencies\]" "$CARGO_TOML" -A9999 | grep -E "^[a-zA-Z0-9_-]+\s*=" | sed -e 's/^[ \t]*//' -e 's/[ \t]*$//' | tr -d '"' | sed 's/=\s*/": "/' | awk -F ': "' '{print "    \"" $1 "\: \"" $2 "\","}' | sed '1s/^/  {"dependencies": {\n/' | sed '$s/,$/\n  }\n}/' > cargo_toml.json
 
 # Read the dependencies.json file
@@ -29,6 +33,7 @@ while IFS=':' read -r dependency version; do
     fi
 done <<< "$dependencies"
 
-echo "$(cat latest_versions.txt)" >> version_changes.txt
+echo "$(cat latest_versions.txt)" >> version_updates.txt
 rm latest_versions.txt
 rm cargo_toml.json
+echo "------------------" >> version_updates.txt
