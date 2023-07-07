@@ -1,66 +1,56 @@
 linenumber=$(sed -n '$=' dependency_present.txt)
-x=1
-
-while [ $x -le $linenumber ]
+for (( x=1; x<=$linenumber; x++ ))
 do
-  linew=$(sed -n "${x}p" dependency_present.txt)
-  echo "$linew"
-  echo "${x}"
-  
-  case $linew in
-    "requirements.txt")
-      echo "PYTHON"
-      chmod +x ./python_req.sh
-      ./python_req.sh
-      ;;
-    "packages.json")
-      echo "Node"
-      chmod +x ./node.sh
-      ./node.sh
-      ;;
-    "build.gradle")
-      echo "Gradle"
-      chmod +x ./gradle.sh
-      ./gradle.sh
-      ;;
-    "pom.xml")
-      echo "Maven"
-      chmod +x ./maven.sh
-      ./maven.sh
-      ;;
-    "gemfile")
-      echo "Ruby"
-      chmod +x ./ruby_gemfile.sh
-      ./ruby_gemfile.sh
-      ;;
-    "cargo.toml")
-      echo "Cargo"
-      chmod +x ./cargo.sh
-      ./cargo.sh
-      ;;
-    "package.yaml")
-      echo "Haskell"
-      chmod +x ./haskell.sh
-      ./haskell.sh
-      ;;
-    "composer.json")
-      echo "PHP"
-      chmod +x ./php.sh
-      ./php.sh
-      ;;
-    "package.swift")
-      echo "Swift"
-      chmod +x ./swift.sh
-      ./swift.sh
-      ;;
-    "packages.config")
-      echo "C#"
-      chmod +x ./csharp.sh
-      ./csharp.sh
-      ;;
-  esac
-  
-  x=$((x + 1))
+linew=$(sed -n "${x}p" dependency_present.txt)
+if [[ $linew == "requirements.txt" ]]
+then
+chmod +x ./python_req.sh
+./python_req.sh
+fi
+if [[ $linew == "packages.json" ]]
+then
+chmod +x ./node.sh
+./node.sh
+fi
+if [[ $linew == "build.gradle" ]]
+then
+chmod +x ./gradle.sh
+./gradle.sh
+fi
+if [[ $linew == "pom.xml" ]]
+then
+chmod +x ./maven.sh
+./maven.sh
+fi
+if [[ $linew == "gemfile" ]]
+then
+chmod +x ./ruby_gemfile.sh
+./ruby_gemfile.sh
+fi
+if [[ $linew == "cargo.toml" ]]
+then
+chmod +x ./cargo.sh
+./cargo.sh
+fi
+if [[ $linew == "package.yaml" ]]
+then
+chmod +x ./haskell.sh
+./haskell.sh
+fi
+if [[ $linew == "composer.json" ]]
+then
+chmod +x ./php.sh
+./php.sh
+fi
+if [[ $linew == "package.swift" ]]
+then
+chmod +x ./swift.sh
+./swift.sh
+fi
+if [[ $linew == "packages.config" ]]
+then
+chmod +x ./csharp.sh
+./csharp.sh
+fi
 done
-
 rm dependency_present.txt
