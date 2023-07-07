@@ -1,7 +1,7 @@
 linenumber=$(sed -n '$=' dependency_present.txt)
 while IFS= read -r linew
 do
-  if [[ $linew == "requirements.txt" ]]
+  if [[ $linew == "requirements.txt\n" ]]
   then
     chmod +x ./python_req.sh
     ./python_req.sh
