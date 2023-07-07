@@ -57,5 +57,6 @@ if [[ $latest_comment == *'~UPD'* ]]; then
     fi
 else
     echo "Flag ~UPD not found in the first line. Aborting..."
+    rm dependency_present.txt
     exit 0
 fi
