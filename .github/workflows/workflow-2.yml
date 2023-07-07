@@ -1,0 +1,38 @@
+env:
+  token: ${{ secrets.TOKEN }}
+
+on:
+  issues:
+    types:
+      - closed
+
+jobs:
+  run_scripts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0
+
+      - name: Run read_comment.sh
+        run: |
+          chmod +x ./read_comment.sh
+          ./read_comment.sh
+        shell: bash
+
+      - name: Run execute.sh
+        run: |
+          chmod +x ./execute.sh
+          ./execute.sh
+        shell: bash
+
+      - name: Run comment_2.sh
+        run: |
+          chmod +x ./comment_2.sh
+          ./comment_2.sh
+        shell: bash
