@@ -1,6 +1,6 @@
 #!/bin/bash
 
-output_file="dependencies.txt"
+output_file="version_updates.txt"
 
 # Clear the output file if it exists
 > "$output_file"
