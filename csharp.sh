@@ -3,6 +3,7 @@
 # Path to the packages.config file
 PACKAGES_CONFIG="packages.config"
 echo -n "" > version_updates.txt
+echo -n "" > myfile.txt
 # Read the packages.config file and extract package names and versions
 packages=($(grep -oP '(?<=<package id=")[^"]+' $PACKAGES_CONFIG))
 versions=($(grep -oP '(?<=version=")[^"]+' $PACKAGES_CONFIG))
