@@ -13,7 +13,8 @@ for ((i=0; i<${#packages[@]}; i++)); do
     version="${versions[i]}"
 
     # Get the latest version for the package
-    latest_version=$(nuget list $package -AllVersions | awk '{print $2}' | tail -n 1)
+  #  latest_version=$(nuget list $package -AllVersions | awk '{print $2}' | tail -n 1)
+ latest_version=$(curl -s "https://api.nuget.org/v3-flatcontainer/$package/index.json" | grep -Po '"version":.*?[^\\]\"' | awk -F':' '{print $2}' | tr -d '", ')
 
     # Compare the current version with the latest version
     if [[ "$version" != "$latest_version" ]]; then
