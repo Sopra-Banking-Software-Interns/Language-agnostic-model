@@ -25,4 +25,5 @@ echo "$latest_version" >> myfile.txt
         echo >> version_updates.txt
     fi
 done
+echo "$(cat version_updates)"
 echo "------------------" >> version_updates.txt
