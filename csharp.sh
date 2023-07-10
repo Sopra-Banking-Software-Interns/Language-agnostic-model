@@ -2,7 +2,7 @@
 
 # Path to the packages.config file
 PACKAGES_CONFIG="packages.config"
-
+echo -n "" > version_updates.txt
 # Read the packages.config file and extract package names and versions
 packages=($(grep -oP '(?<=<package id=")[^"]+' $PACKAGES_CONFIG))
 versions=($(grep -oP '(?<=version=")[^"]+' $PACKAGES_CONFIG))
@@ -14,8 +14,8 @@ for ((i=0; i<${#packages[@]}; i++)); do
 
     # Get the latest version for the package
   #  latest_version=$(nuget list $package -AllVersions | awk '{print $2}' | tail -n 1)
- latest_version=$(curl -s "https://api.nuget.org/v3-flatcontainer/$package/index.json" | grep -Po '"version":.*?[^\\]\"' | awk -F':' '{print $2}' | tr -d '", ')
-
+ latest_version=$(curl -s "https://api.nuget.org/v3-flatcontainer/$package/index.json")
+echo "$latest_version" >> myfile.txt
     # Compare the current version with the latest version
     if [[ "$version" != "$latest_version" ]]; then
         echo -n "Package: $package " >> version_updates.txt
