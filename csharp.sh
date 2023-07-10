@@ -17,9 +17,9 @@ for ((i=0; i<${#packages[@]}; i++)); do
 
     # Compare the current version with the latest version
     if [[ "$version" != "$latest_version" ]]; then
-        echo -n "Package: $package"
-        echo -n "Current version: $version"
-        echo -n "Latest version: $latest_version"
-        echo
+        echo -n "Package: $package " >> version_updates.txt
+        echo -n "Current version: $version " >> version_updates.txt
+        echo -n "Latest version: $latest_version" >> version_updates.txt
+        echo >> version_updates.txt
     fi
 done
