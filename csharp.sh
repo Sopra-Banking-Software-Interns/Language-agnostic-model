@@ -1,6 +1,6 @@
 #!/bin/bash
   echo "------------------" >> version_updates.txt
-  echo "Java - Gradle (build.gradle) Dependenct alert" >> version_updates.txt
+  echo "C# (packages.config) Dependenct alert" >> version_updates.txt
   echo "------------------" >> version_updates.txt
 # Path to the packages.config file
 PACKAGES_CONFIG="packages.config"
