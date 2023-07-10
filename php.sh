@@ -29,6 +29,6 @@ while IFS=':' read -r dependency version; do
     fi
 done <<< "$dependencies"
 
-echo "$(cat latest_versions.txt)" >> version_changes.txt
+echo "$(cat latest_versions.txt)" >> version_updates.txt
 rm latest_versions.txt
 rm depe.json
