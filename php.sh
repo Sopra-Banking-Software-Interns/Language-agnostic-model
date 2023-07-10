@@ -12,22 +12,20 @@ while IFS=':' read -r dependency version; do
     # Remove leading/trailing whitespace and quotes from the dependency and version
     dependency=$(echo "$dependency" | tr -d '[:space:]"')
     version=$(echo "$version" | tr -d '[:space:]"')
-
+    echo $dependency - $version
     
     # Use cargo search command to check the latest version
     latest_version=$(composer show -a $dependency | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1)
+    echo $latest_version
     
     # Store the latest version in the array
     latest_versions["$dependency"]=$latest_version
 
     # Compare the version from dependencies.json with the latest version
     if [[ "$version" < "$latest_version" ]]; then
-        echo "Update available for $dependency = $latest_version" >> latest_versions.txt
+        echo "Update available for $dependency = $latest_version" >> version_updates.txt
     
 
     fi
 done <<< "$dependencies"
-
-echo "$(cat latest_versions.txt)" >> version_updates.txt
-rm latest_versions.txt
 rm depe.json
