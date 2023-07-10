@@ -1,5 +1,3 @@
-gem install php_exec
-gem install composer-ruby
 #!/bin/bash
 jq '.require' composer.json > depe.json
 
