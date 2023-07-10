@@ -1,14 +1,14 @@
-Package: Antlr Current version: 1.0 Latest version: "3.5.0.2"
+Package: Antlr Current version: 1.0 Latest version: 
 Package: bootstrap Current version: 3.5.0.2 Latest version: "5.3.0"
-Package: jQuery Current version: 3.3.7 Latest version: "3.7.0"
-Package: jQuery.Validation Current version: 3.3.1 Latest version: "1.19.5"
-Package: Microsoft.AspNet.Mvc Current version: 1.17.0 Latest version: "6.0.0-rc1-final"
-Package: Microsoft.AspNet.Razor Current version: 5.2.4 Latest version: "4.0.0-rc1-final"
-Package: Microsoft.AspNet.Web.Optimization Current version: 3.2.4 Latest version: "1.1.3"
-Package: Microsoft.AspNet.WebPages Current version: 1.1.3 Latest version: "3.3.0-preview1"
-Package: Microsoft.CodeDom.Providers.DotNetCompilerPlatform Current version: 3.2.4 Latest version: "4.1.0"
-Package: Microsoft.jQuery.Unobtrusive.Validation Current version: 2.0.0 Latest version: "4.0.0"
-Package: Microsoft.Web.Infrastructure Current version: 3.2.4 Latest version: "2.0.1"
-Package: Modernizr Current version: 1.0.0.0 Latest version: "2.8.3"
-Package: Newtonsoft.Json Current version: 2.8.3 Latest version: "13.0.3"
-Package: WebGrease Current version: 11.0.1 Latest version: "1.6.0"
+Package: jQuery Current version: 3.3.7 Latest version: 
+Package: jQuery.Validation Current version: 3.3.1 Latest version: 
+Package: Microsoft.AspNet.Mvc Current version: 1.17.0 Latest version: 
+Package: Microsoft.AspNet.Razor Current version: 5.2.4 Latest version: 
+Package: Microsoft.AspNet.Web.Optimization Current version: 3.2.4 Latest version: 
+Package: Microsoft.AspNet.WebPages Current version: 1.1.3 Latest version: 
+Package: Microsoft.CodeDom.Providers.DotNetCompilerPlatform Current version: 3.2.4 Latest version: 
+Package: Microsoft.jQuery.Unobtrusive.Validation Current version: 2.0.0 Latest version: 
+Package: Microsoft.Web.Infrastructure Current version: 3.2.4 Latest version: 
+Package: Modernizr Current version: 1.0.0.0 Latest version: 
+Package: Newtonsoft.Json Current version: 2.8.3 Latest version: 
+Package: WebGrease Current version: 11.0.1 Latest version: 
