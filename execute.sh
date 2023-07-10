@@ -57,6 +57,5 @@ done
 while read -r line
 do
     echo "$line"
-done < dependency_present.txt
 
 rm dependency_present.txt
