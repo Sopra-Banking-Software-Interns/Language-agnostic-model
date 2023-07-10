@@ -1,0 +1,18 @@
+  {"dependencies": {
+    "clap ": "{ workspace = true, features = [wrap_help] }",
+    "curl ": "{ workspace = true, features = [http2] }",
+    "pretty_env_logger ": "{ workspace = true, optional = true }",
+    "serde ": "{ workspace = true, features = [derive] }",
+    "serde_json ": "{ workspace = true, features = [raw_value] }",
+    "openssl ": "{ workspace = true, optional = true }",
+    "workspace ": "true",
+    "features ": "[",
+    "name ": "cargo",
+    "test ": "false",
+    "doc ": "false",
+    "vendored-openssl ": "[openssl/vendored]",
+    "vendored-libgit2 ": "[libgit2-sys/vendored]",
+    "pretty-env-logger ": "[pretty_env_logger]",
+    "all-static ": "['vendored-openssl', 'curl/static-curl', 'curl/force-system-lib-on-osx']"
+  }
+}
