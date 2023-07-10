@@ -53,4 +53,3 @@ chmod +x ./csharp.sh
 ./csharp.sh
 fi
 done
-rm dependency_present.txt
