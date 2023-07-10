@@ -13,6 +13,8 @@ The automation suite currently, supports the following languages/files.
 * Ruby (Gemfile)
 * Swift (package.swift)
 * Rust (cargo.toml)
+* PHP (composer.json) {Under Development}
+* C# (packages.config) {Under Development}
   
 
 ## Workflow 
