@@ -1,0 +1,17 @@
+name: Maven Dependency Check
+
+on:
+   workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Check Dependency Updates
+        run: |
+          chmod +x ./csharp.sh
+          ./csharp.sh
