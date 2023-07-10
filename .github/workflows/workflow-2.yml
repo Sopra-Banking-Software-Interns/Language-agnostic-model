@@ -24,11 +24,6 @@ jobs:
         with:
           php-version: 7.4
 
-      - name: Install Composer
-        uses: composer/install-action@v2
-        with:
-          php-version: 7.4
-
       - name: Run read_comment.sh
         run: |
           chmod +x ./read_comment.sh
