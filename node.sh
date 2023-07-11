@@ -3,7 +3,7 @@
     echo "Node (package.json) Dependency alert" >> version_updates.txt
     echo "------------------" >> version_updates.txt
 # Read the JSON file
-json=$(cat package.json)
+json=$(cat packages.json)
 
 # Extract the "dependencies" field and save it to a new JSON file
 echo "$json" | jq '{ dependencies }' > dependencies.json
