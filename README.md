@@ -14,7 +14,7 @@ The automation suite currently, supports the following languages/files.
 * Swift (package.swift)
 * Rust (cargo.toml)
 * PHP (composer.json)
-* C# (packages.config) {Under Development}
+* C# (packages.config)
 * Haskel (stack.yaml) {Under Development}
   
 
