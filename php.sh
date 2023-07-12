@@ -4,6 +4,8 @@ jq '.require' composer.json > depe.json
 # Read the dependencies.json file
 dependencies=$(cat depe.json )
 echo -n "" > latest_versions.txt
+echo -n "" > version_updates.txt  # Add this line to create the file
+
 # Create an array to store the latest versions
 declare -A latest_versions
 
