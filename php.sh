@@ -24,8 +24,12 @@ while IFS=':' read -r dependency version; do
     # Compare the version from dependencies.json with the latest version
     if [[ "$version" < "$latest_version" ]]; then
         echo "Update available for $dependency = $latest_version" >> version_updates.txt
-    
-
+        echo "Update available for $dependency = $latest_version"
     fi
+
+    while read line
+    do 
+    echo $line
+    done < version_updates.txt
 done <<< "$dependencies"
 rm depe.json
