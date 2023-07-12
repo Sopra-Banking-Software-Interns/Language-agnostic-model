@@ -41,7 +41,6 @@ if [[ $linew == "composer.json" ]]
 then
 chmod +x ./php.sh
 ./php.sh
-sleep 20
 fi
 if [[ $linew == "package.swift" ]]
 then
