@@ -1,4 +1,5 @@
 linenumber=$(sed -n '$=' dependency_present.txt)
+echo "$(cat dependency_present.txt)"
 for (( x=1; x<=$linenumber; x++ ))
 do
 linew=$(sed -n "${x}p" dependency_present.txt)
