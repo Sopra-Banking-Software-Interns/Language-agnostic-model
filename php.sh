@@ -1,5 +1,7 @@
 #!/bin/bash
 echo -n "" > version_updates.txt  # Add this line to create the file
+echo -n "" > latest_versions.txt
+echo -n "" > depe.json
     echo "------------------" >> version_updates.txt
     echo "PHP (composer.json) Dependency alert" >> version_updates.txt
     echo "------------------" >> version_updates.txt
