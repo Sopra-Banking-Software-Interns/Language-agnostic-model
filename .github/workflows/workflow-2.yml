@@ -24,17 +24,16 @@ jobs:
         with:
           php-version: 7.4
 
-      - name: Run read_comment.sh
-        run: |
-          chmod +x ./read_comment.sh
-          ./read_comment.sh
-        shell: bash
-
       - name: Run execute.sh
+        id: execute
         run: |
           chmod +x ./execute.sh
           ./execute.sh
         shell: bash
+
+      - name: Wait for execute.sh to complete
+        if: ${{ steps.execute.outcome == 'success' }}
+        run: sleep 20s  # Adjust the duration as needed
 
       - name: Run comment_2.sh
         run: |
