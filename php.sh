@@ -33,3 +33,11 @@ while IFS=':' read -r dependency version; do
 done < "$dependencies"
 rm depe.json
     echo "------------------" >> version_updates.txt
+echo 
+echo 
+echo "Reading File"
+echo 
+echo 
+while read line; do
+    echo $line
+done < version_updates.txt
