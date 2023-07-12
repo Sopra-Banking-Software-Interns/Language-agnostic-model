@@ -34,7 +34,8 @@ while IFS=':' read -r dependency version; do
 done <<< "$dependencies"
 
 echo "$(cat latest_versions.txt)" >> version_updates.txt
-
+rm latest_versions.txt
+rm depe.json
 echo 
 echo 
 echo "Reading File"
