@@ -37,10 +37,6 @@ jobs:
           ./execute.sh
         shell: bash
 
-      - name: Wait for execute.sh to complete
-        if: ${{ steps.execute.outcome == 'success' }}
-        run: sleep 20s  # Adjust the duration as needed
-
       - name: Run comment_2.sh
         run: |
           chmod +x ./comment_2.sh
