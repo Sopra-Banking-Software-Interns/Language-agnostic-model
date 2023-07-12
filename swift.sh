@@ -2,8 +2,6 @@
 
 output_file="version_updates.txt"
 
-# Clear the output file if it exists
-> "$output_file"
 
 # Read the Package.swift file
 while read -r line; do
