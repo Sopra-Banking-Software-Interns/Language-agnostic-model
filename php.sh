@@ -6,7 +6,7 @@ dependencies=$(cat depe.json )
 echo -n "" > latest_versions.txt
 echo -n "" > version_updates.txt  # Add this line to create the file
     echo "------------------" >> version_updates.txt
-    echo "PHP (composer.json) Dependenct alert" >> version_updates.txt
+    echo "PHP (composer.json) Dependency alert" >> version_updates.txt
     echo "------------------" >> version_updates.txt
 # Create an array to store the latest versions
 declare -A latest_versions
@@ -27,9 +27,9 @@ while IFS=':' read -r dependency version; do
 
     # Compare the version from dependencies.json with the latest version
     if [[ "$version" < "$latest_version" ]]; then
-        line=$(echo "Update available for $dependency = $latest_version")
+        line=$(echo "Update available for $dependency with latest version $latest_version")
         echo $line >> version_updates.txt
     fi
-done <<< "$dependencies"
+done << "$dependencies"
 rm depe.json
     echo "------------------" >> version_updates.txt
