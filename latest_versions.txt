@@ -1,7 +1,0 @@
-Update available for clap = 
-Update available for curl = 
-Update available for pretty_env_logger = 
-Update available for serde = 
-Update available for serde_json = 
-Update available for openssl = 
-Update available for workspace = 

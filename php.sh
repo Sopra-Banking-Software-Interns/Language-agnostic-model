@@ -30,6 +30,6 @@ while IFS=':' read -r dependency version; do
         line=$(echo "Update available for $dependency with latest version $latest_version")
         echo $line >> version_updates.txt
     fi
-done << "$dependencies"
+done < "$dependencies"
 rm depe.json
     echo "------------------" >> version_updates.txt

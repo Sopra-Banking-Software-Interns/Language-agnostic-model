@@ -17,7 +17,7 @@ while read -r line; do
     #echo "Latest Version: $latest_version"
     #echo "------------------"
     if [[ $version != $latest_version ]]; then
-      line=$(echo "Updates available for $dependency from $version to $latest_version")
+      line=$(echo "Update available for $dependency from $version to $latest_version")
       echo $line >> version_updates.txt
     fi
   fi
