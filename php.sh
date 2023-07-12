@@ -5,7 +5,9 @@ jq '.require' composer.json > depe.json
 dependencies=$(cat depe.json )
 echo -n "" > latest_versions.txt
 echo -n "" > version_updates.txt  # Add this line to create the file
-
+    echo "------------------" >> version_updates.txt
+    echo "Python (requirements.txt) Dependenct alert" >> version_updates.txt
+    echo "------------------" >> version_updates.txt
 # Create an array to store the latest versions
 declare -A latest_versions
 
@@ -28,10 +30,6 @@ while IFS=':' read -r dependency version; do
         echo "Update available for $dependency = $latest_version" >> version_updates.txt
         echo "Update available for $dependency = $latest_version"
     fi
-
-    while read line
-    do 
-    echo $line
-    done < version_updates.txt
 done <<< "$dependencies"
 rm depe.json
+    echo "------------------" >> version_updates.txt
